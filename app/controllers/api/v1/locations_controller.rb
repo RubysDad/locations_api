@@ -20,6 +20,6 @@ class Api::V1::LocationsController < ApiController
   private
 
   def set_location
-    @location = Location.find(params[:id])
+    @location = Location.find_by!(slug: params[:id])
   end
 end
