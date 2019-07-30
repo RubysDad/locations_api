@@ -5,17 +5,10 @@ class Api::V1::LocationsController < ApiController
 
   def index
     @locations = Location.all
-    # render json: {
-    #   locations: @locations
-    # }
   end
 
   def show
-    # render json: {
-    #   id: @location.id,
-    #   name: @location.name
-    # }
-    render json: @location
+    render json: @location, include: ['recordings']
   end
 
   private

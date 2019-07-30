@@ -1,3 +1,5 @@
 class RecordingSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :temp, :status
+
+  belongs_to :location
 end
